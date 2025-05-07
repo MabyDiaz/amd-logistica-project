@@ -5,12 +5,12 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // Extraer las variables de entorno
-const dbName = process.env.DB_NAME || 'logistica_db';
-const dbUser = process.env.DB_USER || 'root';
-const dbPassword = process.env.DB_PASSWORD || 'root';
-const dbHost = process.env.DB_HOST || 'localhost';
-const dbDialect = process.env.DB_DIALECT || 'mysql';
-const dbPort = process.env.DB_PORT || '3306';
+const dbName = process.env.DB_NAME;
+const dbUser = process.env.DB_USER;
+const dbPassword = process.env.DB_PASSWORD;
+const dbHost = process.env.DB_HOST;
+const dbDialect = process.env.DB_DIALECT;
+const dbPort = process.env.DB_PORT;
 
 // Crear una instancia de Sequelize
 const sequelize = new Sequelize(dbName, dbUser, dbPassword, {
