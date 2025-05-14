@@ -1,6 +1,8 @@
 import express from 'express';
 import { sequelize } from './src/models/index.js';
 
+//Importar rutas
+import routerPrincipal from './src/routes/index.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,7 +14,8 @@ app.get('/', (req, res) => {
   res.send('¡Backend funcionando!');
 });
 
-
+// Usar las rutas
+app.use('/api', routerPrincipal);
 
 // Iniciar servidor y sincronizar DB
 async function startServer() {
